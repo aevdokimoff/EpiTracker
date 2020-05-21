@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsr-ZU-jP1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="iMH-Ry-F6S">
+            <objects>
+                <viewController id="1fN-tv-pvt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ThE-Cx-6Bb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="X3x-Ao-3cM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="SVN-fG-IxV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMm-j0-Kaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A6u-wP-1dS">
+            <objects>
+                <viewController id="Hgx-wS-ceq" customClass="ViewController" customModule="EpiTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWf-Ms-OiH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="avM-AD-57R">
+                                <rect key="frame" x="0.0" y="88" width="414" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="346" id="f6z-wB-XLS"/>
+                                </constraints>
+                            </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-O0-7DF">
+                                <rect key="frame" x="47" y="771" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="v85-4J-hld"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="Hgx-wS-ceq" eventType="valueChanged" id="5C9-bw-52x"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="odE-ya-cOw" firstAttribute="trailing" secondItem="J0L-O0-7DF" secondAttribute="trailing" constant="49" id="8pg-O5-uu1"/>
+                            <constraint firstItem="avM-AD-57R" firstAttribute="top" secondItem="odE-ya-cOw" secondAttribute="top" id="HLV-GR-TKZ"/>
+                            <constraint firstItem="odE-ya-cOw" firstAttribute="bottom" secondItem="J0L-O0-7DF" secondAttribute="bottom" constant="13" id="QJm-gl-zXr"/>
+                            <constraint firstItem="avM-AD-57R" firstAttribute="trailing" secondItem="odE-ya-cOw" secondAttribute="trailing" id="RPX-AS-lPI"/>
+                            <constraint firstItem="avM-AD-57R" firstAttribute="leading" secondItem="odE-ya-cOw" secondAttribute="leading" id="cFC-q6-rtG"/>
+                            <constraint firstItem="J0L-O0-7DF" firstAttribute="leading" secondItem="odE-ya-cOw" secondAttribute="leading" constant="49" id="q7d-nJ-7Zp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="odE-ya-cOw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WPE-S5-Wzh"/>
+                    <connections>
+                        <outlet property="mapView" destination="avM-AD-57R" id="hLh-mH-FGD"/>
+                        <outlet property="slider" destination="J0L-O0-7DF" id="BKR-30-Oy2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSd-eN-TCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.913043478261" y="-185.49107142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iSF-ij-Otg">
+            <objects>
+                <tabBarController id="fsr-ZU-jP1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ml1-qn-weF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jh3-Hh-yX9" kind="relationship" relationship="viewControllers" id="tTU-5o-21L"/>
+                        <segue destination="1fN-tv-pvt" kind="relationship" relationship="viewControllers" id="3TR-1o-lh6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwv-KP-x4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="137"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="S2r-oF-qPn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jh3-Hh-yX9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="B3a-aS-Utu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aRa-ep-EeC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hgx-wS-ceq" kind="relationship" relationship="rootViewController" id="EPj-UR-mbB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7P-Ez-wp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763.7681159420292" y="-185.49107142857142"/>
+        </scene>
+    </scenes>
+</document>

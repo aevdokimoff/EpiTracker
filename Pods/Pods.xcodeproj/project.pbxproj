@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F49453B1DB94C0A76ECB1708155F2AB /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D416525035E9C24F2D0A35805F50A9 /* LFHeatMap.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		15567FE70F7465708A1227830462B208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1B2EBDB516FF31027B97074F2D14C06A /* LFHeatMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE188605FB4968A12039235D0F2BC55 /* LFHeatMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		320F7A6149900AE1FF8C86A0B88A1E75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		60EE868589F50DF583365A6881C1D367 /* LFHeatMap.h in Headers */ = {isa = PBXBuildFile; fileRef = C09C9EF1100EA63D2E5C70C9A6EDE679 /* LFHeatMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C51CA285D8B2403A018D4436B4F89C18 /* Pods-EpiTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B073D41FF4B7E43923BE78C2936E418 /* Pods-EpiTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5BC32E639B1D04E232D3356661916EC /* LFHeatMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D8E67C8D27496146A9500F7900D92 /* LFHeatMap-dummy.m */; };
+		FA497601D30222D00FC687D8871E24E2 /* Pods-EpiTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F78F323008F3C93CE0F26CED682F3C2 /* Pods-EpiTracker-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73487357717E4E8C7435A76C7001DAF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52563147FAD9CF649D29EBB93686C1D4;
+			remoteInfo = LFHeatMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		163965F15C1C88A41D41EC551E188039 /* Pods-EpiTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EpiTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D1BBCF0ADB7A86BEE3C88CFC5544A6A /* LFHeatMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LFHeatMap.modulemap; sourceTree = "<group>"; };
+		1F78F323008F3C93CE0F26CED682F3C2 /* Pods-EpiTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EpiTracker-dummy.m"; sourceTree = "<group>"; };
+		2D8B1D6BEA8C1E50ACF8CDCDF4A9BDEF /* Pods-EpiTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EpiTracker.release.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		476F607848C9B3AAE71A821ED86EA7C5 /* LFHeatMap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFHeatMap-prefix.pch"; sourceTree = "<group>"; };
+		4C5D8E67C8D27496146A9500F7900D92 /* LFHeatMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFHeatMap-dummy.m"; sourceTree = "<group>"; };
+		56B7F09EFBC4EE0193F13D8C19B260B4 /* Pods-EpiTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EpiTracker-frameworks.sh"; sourceTree = "<group>"; };
+		6B073D41FF4B7E43923BE78C2936E418 /* Pods-EpiTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EpiTracker-umbrella.h"; sourceTree = "<group>"; };
+		724BAD04F235D013DFF3045C70876E4D /* Pods-EpiTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EpiTracker-Info.plist"; sourceTree = "<group>"; };
+		9428E2391D8C40372EE033F8872BC4EA /* LFHeatMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFHeatMap.release.xcconfig; sourceTree = "<group>"; };
+		9CE188605FB4968A12039235D0F2BC55 /* LFHeatMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFHeatMap-umbrella.h"; sourceTree = "<group>"; };
+		9D39BA01F50E10D163DD50B1900836F2 /* Pods_EpiTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EpiTracker.framework; path = "Pods-EpiTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E12BA49970A3C5BE8F67C7FB97432DE /* Pods-EpiTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EpiTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A901A6171B40144BD0EC42C9846B6E2B /* Pods-EpiTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EpiTracker.modulemap"; sourceTree = "<group>"; };
+		AEF37479B4E743507856B4BCAD4F1D0F /* LFHeatMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LFHeatMap.framework; path = LFHeatMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B611F938F902ECDB296582D2BA9AFF97 /* LFHeatMap-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LFHeatMap-Info.plist"; sourceTree = "<group>"; };
+		C09C9EF1100EA63D2E5C70C9A6EDE679 /* LFHeatMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFHeatMap.h; path = LFHeatMap/LFHeatMap.h; sourceTree = "<group>"; };
+		C9CA968686228D7F4B486181DEA573A9 /* LFHeatMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFHeatMap.debug.xcconfig; sourceTree = "<group>"; };
+		D98A08CB76313B1C1C211FF5A681AA3D /* Pods-EpiTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EpiTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D416525035E9C24F2D0A35805F50A9 /* LFHeatMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFHeatMap.m; path = LFHeatMap/LFHeatMap.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B9D6EF5B382877F92ADD0A3833150B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15567FE70F7465708A1227830462B208 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7572453F6B5F8C40D279591E08C1F835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320F7A6149900AE1FF8C86A0B88A1E75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038FB9BB260F84A74CB869D3DD26010C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BAC0CAB38A70CAA481909781F9074 /* Pods-EpiTracker */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0C8BAC0CAB38A70CAA481909781F9074 /* Pods-EpiTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A901A6171B40144BD0EC42C9846B6E2B /* Pods-EpiTracker.modulemap */,
+				9E12BA49970A3C5BE8F67C7FB97432DE /* Pods-EpiTracker-acknowledgements.markdown */,
+				163965F15C1C88A41D41EC551E188039 /* Pods-EpiTracker-acknowledgements.plist */,
+				1F78F323008F3C93CE0F26CED682F3C2 /* Pods-EpiTracker-dummy.m */,
+				56B7F09EFBC4EE0193F13D8C19B260B4 /* Pods-EpiTracker-frameworks.sh */,
+				724BAD04F235D013DFF3045C70876E4D /* Pods-EpiTracker-Info.plist */,
+				6B073D41FF4B7E43923BE78C2936E418 /* Pods-EpiTracker-umbrella.h */,
+				D98A08CB76313B1C1C211FF5A681AA3D /* Pods-EpiTracker.debug.xcconfig */,
+				2D8B1D6BEA8C1E50ACF8CDCDF4A9BDEF /* Pods-EpiTracker.release.xcconfig */,
+			);
+			name = "Pods-EpiTracker";
+			path = "Target Support Files/Pods-EpiTracker";
+			sourceTree = "<group>";
+		};
+		115941E13BAE7C72A38F72748E82DF25 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D1BBCF0ADB7A86BEE3C88CFC5544A6A /* LFHeatMap.modulemap */,
+				4C5D8E67C8D27496146A9500F7900D92 /* LFHeatMap-dummy.m */,
+				B611F938F902ECDB296582D2BA9AFF97 /* LFHeatMap-Info.plist */,
+				476F607848C9B3AAE71A821ED86EA7C5 /* LFHeatMap-prefix.pch */,
+				9CE188605FB4968A12039235D0F2BC55 /* LFHeatMap-umbrella.h */,
+				C9CA968686228D7F4B486181DEA573A9 /* LFHeatMap.debug.xcconfig */,
+				9428E2391D8C40372EE033F8872BC4EA /* LFHeatMap.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LFHeatMap";
+			sourceTree = "<group>";
+		};
+		5D06E52E0BFCA71C9036018856AA7A16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B15DE183413F9C69CD723AD66D5AF0E3 /* LFHeatMap */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B15DE183413F9C69CD723AD66D5AF0E3 /* LFHeatMap */ = {
+			isa = PBXGroup;
+			children = (
+				C09C9EF1100EA63D2E5C70C9A6EDE679 /* LFHeatMap.h */,
+				F7D416525035E9C24F2D0A35805F50A9 /* LFHeatMap.m */,
+				115941E13BAE7C72A38F72748E82DF25 /* Support Files */,
+			);
+			name = LFHeatMap;
+			path = LFHeatMap;
+			sourceTree = "<group>";
+		};
+		BB6A558F9D54E142BBA4E93C9D22CDC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEF37479B4E743507856B4BCAD4F1D0F /* LFHeatMap.framework */,
+				9D39BA01F50E10D163DD50B1900836F2 /* Pods_EpiTracker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				5D06E52E0BFCA71C9036018856AA7A16 /* Pods */,
+				BB6A558F9D54E142BBA4E93C9D22CDC7 /* Products */,
+				038FB9BB260F84A74CB869D3DD26010C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6ED6C7AAAE60A58198DAE17D2389F4E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2EBDB516FF31027B97074F2D14C06A /* LFHeatMap-umbrella.h in Headers */,
+				60EE868589F50DF583365A6881C1D367 /* LFHeatMap.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7D5CAA386866DBC1FABC160E7E0300D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51CA285D8B2403A018D4436B4F89C18 /* Pods-EpiTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0254F4A63F567D4102662F1C3621E48A /* Pods-EpiTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55848D18833BCC12F3C4601C567505B3 /* Build configuration list for PBXNativeTarget "Pods-EpiTracker" */;
+			buildPhases = (
+				E7D5CAA386866DBC1FABC160E7E0300D /* Headers */,
+				78949E62A6DEFC24CB46B55829A484A3 /* Sources */,
+				5B9D6EF5B382877F92ADD0A3833150B7 /* Frameworks */,
+				412769FC69DD145C54CE07F78F50E334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECFDBECED7BEF3DBB5D411368F0B29C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-EpiTracker";
+			productName = "Pods-EpiTracker";
+			productReference = 9D39BA01F50E10D163DD50B1900836F2 /* Pods_EpiTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52563147FAD9CF649D29EBB93686C1D4 /* LFHeatMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BC1BDFDC3ED3FDB485CF168B63BD30 /* Build configuration list for PBXNativeTarget "LFHeatMap" */;
+			buildPhases = (
+				6ED6C7AAAE60A58198DAE17D2389F4E5 /* Headers */,
+				AAB4F92F3FE04F3BAED9BC3347763912 /* Sources */,
+				7572453F6B5F8C40D279591E08C1F835 /* Frameworks */,
+				967AF1F0DF7708304225063EAB1B4949 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFHeatMap;
+			productName = LFHeatMap;
+			productReference = AEF37479B4E743507856B4BCAD4F1D0F /* LFHeatMap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = BB6A558F9D54E142BBA4E93C9D22CDC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52563147FAD9CF649D29EBB93686C1D4 /* LFHeatMap */,
+				0254F4A63F567D4102662F1C3621E48A /* Pods-EpiTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		412769FC69DD145C54CE07F78F50E334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967AF1F0DF7708304225063EAB1B4949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78949E62A6DEFC24CB46B55829A484A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA497601D30222D00FC687D8871E24E2 /* Pods-EpiTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB4F92F3FE04F3BAED9BC3347763912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BC32E639B1D04E232D3356661916EC /* LFHeatMap-dummy.m in Sources */,
+				0F49453B1DB94C0A76ECB1708155F2AB /* LFHeatMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECFDBECED7BEF3DBB5D411368F0B29C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LFHeatMap;
+			target = 52563147FAD9CF649D29EBB93686C1D4 /* LFHeatMap */;
+			targetProxy = 73487357717E4E8C7435A76C7001DAF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		913AB05101EEAB72C53FAAE4802F3767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8B1D6BEA8C1E50ACF8CDCDF4A9BDEF /* Pods-EpiTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CBD7F12CA778D54723CC5C7B014451CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9428E2391D8C40372EE033F8872BC4EA /* LFHeatMap.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LFHeatMap/LFHeatMap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LFHeatMap/LFHeatMap-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LFHeatMap/LFHeatMap.modulemap";
+				PRODUCT_MODULE_NAME = LFHeatMap;
+				PRODUCT_NAME = LFHeatMap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DEE314A34A95349400CA9BC9637FD0D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9CA968686228D7F4B486181DEA573A9 /* LFHeatMap.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LFHeatMap/LFHeatMap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LFHeatMap/LFHeatMap-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LFHeatMap/LFHeatMap.modulemap";
+				PRODUCT_MODULE_NAME = LFHeatMap;
+				PRODUCT_NAME = LFHeatMap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5ADBEE7BE9C4CED880DA642961C81C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D98A08CB76313B1C1C211FF5A681AA3D /* Pods-EpiTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55848D18833BCC12F3C4601C567505B3 /* Build configuration list for PBXNativeTarget "Pods-EpiTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5ADBEE7BE9C4CED880DA642961C81C1 /* Debug */,
+				913AB05101EEAB72C53FAAE4802F3767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BC1BDFDC3ED3FDB485CF168B63BD30 /* Build configuration list for PBXNativeTarget "LFHeatMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE314A34A95349400CA9BC9637FD0D4 /* Debug */,
+				CBD7F12CA778D54723CC5C7B014451CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
