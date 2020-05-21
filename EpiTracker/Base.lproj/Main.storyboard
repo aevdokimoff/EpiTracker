@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="1765" y="463"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="A6u-wP-1dS">
             <objects>
                 <viewController id="Hgx-wS-ceq" customClass="ViewController" customModule="EpiTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,31 +37,18 @@
                                     <constraint firstAttribute="height" constant="346" id="f6z-wB-XLS"/>
                                 </constraints>
                             </mapView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-O0-7DF">
-                                <rect key="frame" x="47" y="771" width="320" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="v85-4J-hld"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="Hgx-wS-ceq" eventType="valueChanged" id="5C9-bw-52x"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="odE-ya-cOw" firstAttribute="trailing" secondItem="J0L-O0-7DF" secondAttribute="trailing" constant="49" id="8pg-O5-uu1"/>
                             <constraint firstItem="avM-AD-57R" firstAttribute="top" secondItem="odE-ya-cOw" secondAttribute="top" id="HLV-GR-TKZ"/>
-                            <constraint firstItem="odE-ya-cOw" firstAttribute="bottom" secondItem="J0L-O0-7DF" secondAttribute="bottom" constant="13" id="QJm-gl-zXr"/>
                             <constraint firstItem="avM-AD-57R" firstAttribute="trailing" secondItem="odE-ya-cOw" secondAttribute="trailing" id="RPX-AS-lPI"/>
                             <constraint firstItem="avM-AD-57R" firstAttribute="leading" secondItem="odE-ya-cOw" secondAttribute="leading" id="cFC-q6-rtG"/>
-                            <constraint firstItem="J0L-O0-7DF" firstAttribute="leading" secondItem="odE-ya-cOw" secondAttribute="leading" constant="49" id="q7d-nJ-7Zp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="odE-ya-cOw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WPE-S5-Wzh"/>
+                    <navigationItem key="navigationItem" title="Map" id="WPE-S5-Wzh"/>
                     <connections>
                         <outlet property="mapView" destination="avM-AD-57R" id="hLh-mH-FGD"/>
-                        <outlet property="slider" destination="J0L-O0-7DF" id="BKR-30-Oy2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSd-eN-TCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

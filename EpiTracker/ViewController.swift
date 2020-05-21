@@ -45,14 +45,9 @@ class ViewController: UIViewController {
         self.imageView = UIImageView(frame: mapView.frame)
         self.imageView.contentMode = .center
         self.view.addSubview(self.imageView)
-        self.sliderChanged(self.slider!)
-        
-    }
-    
-    @IBAction func sliderChanged(_ sender: Any) {
-        let boost = slider.value
-        let heatMap = LFHeatMap.heatMap(for: self.mapView, boost: boost, locations: self.localtions as? [Any], weights: self.weights as? [Any])
+        let heatMap = LFHeatMap.heatMap(for: self.mapView, boost: 0.5, locations: self.localtions as? [Any], weights: self.weights as? [Any])
         self.imageView.image = heatMap
+        
     }
     
 }
