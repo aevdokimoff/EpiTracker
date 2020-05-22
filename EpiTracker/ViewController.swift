@@ -10,9 +10,8 @@ import UIKit
 import MapKit
 import LFHeatMap
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var slider: UISlider!
     
     let kLatitude = "latitude"
     let kLongitude = "longitude"
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.mapView.delegate = self
         
         let dataFile = Bundle.main.path(forResource: "quake", ofType: "plist")!
         let quakeData = NSArray(contentsOfFile: dataFile) as! [Dictionary<String, Any>]
@@ -49,5 +48,11 @@ class ViewController: UIViewController {
         self.imageView.image = heatMap
         
     }
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        let heatMap = LFHeatMap.heatMap(for: self.mapView, boost: 0.5, locations: self.localtions as? [Any], weights: self.weights as? [Any])
+        self.imageView.image = heatMap
+    }
+    
     
 }
