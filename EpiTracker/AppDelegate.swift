@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  EpiTracker
 //
-//  Created by Artem on 22.05.20.
-//  Copyright © 2020 Artem. All rights reserved.
+//  Created by Artem Evdokimov on 22.05.20.
+//  Copyright © 2020 Artem Evdokimov. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  EpiTracker
 //
-//  Created by Artem on 22.05.20.
-//  Copyright © 2020 Artem. All rights reserved.
+//  Created by Artem Evdokimov on 22.05.20.
+//  Copyright © 2020 Artem Evdokimov. All rights reserved.
 //
 
 import UIKit
@@ -13,6 +13,7 @@ import SPAlert
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectCityTextField: UITextField!
     @IBOutlet weak var selectDiseaseTextField: UITextField!
@@ -21,6 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var selectVisualEffectViewEnclosureView: UIView!
     @IBOutlet weak var addNewCaseButton: UIButton!
     
+    // MARK: - Globals
     let kLatitude = "latitude"
     let kLongitude = "longitude"
     let kMagnitude = "magnitude"
@@ -35,7 +37,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     fileprivate let diseasesList = ["Corona", "Grippe"]
     fileprivate let periodsList = ["1-3 days", "4-7 days", "7-14 days", "More than 14 days"]
 
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -51,6 +53,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.setupViews()
     }
     
+    // MARK: - UI
     func setupButtons() {
         self.addNewCaseButton.layer.cornerRadius = 4
     }
@@ -87,11 +90,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.selectPeriodPickerView.tag = 2
     }
     
+    // MARK: - Notifications
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // MARK: - Map
     func setupMap() {
         self.locationManager.requestAlwaysAuthorization()
         // For use in foreground
@@ -146,6 +151,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    // MARK: - Keyboard
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
@@ -164,6 +170,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.view.endEditing(true)
     }
     
+    // MARK: - Actions
     @IBAction func addNewCaseButtonDidTouch(_ sender: Any) {
         let alertView = SPAlertView(title: "Case added", message: nil, preset: SPAlertPreset.done)
         alertView.duration = 1.0
@@ -227,26 +234,5 @@ extension ViewController: ToolbarPickerViewDelegate {
             self.selectPeriodTextField.text = nil
             self.selectPeriodTextField.resignFirstResponder()
         }
-    }
-}
-
-extension CLLocation {
-    func fetchCityAndCountry(completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
-        CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first?.locality, $0?.first?.country, $1) }
-    }
-}
-
-extension UIView {
-
-    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
-        layer.masksToBounds = false
-        layer.shadowOffset = offset
-        layer.shadowColor = color.cgColor
-        layer.shadowRadius = radius
-        layer.shadowOpacity = opacity
-
-        let backgroundCGColor = backgroundColor?.cgColor
-        backgroundColor = nil
-        layer.backgroundColor =  backgroundCGColor
     }
 }

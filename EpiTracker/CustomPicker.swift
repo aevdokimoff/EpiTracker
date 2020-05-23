@@ -2,8 +2,8 @@
 //  CustomPicker.swift
 //  EpiTracker
 //
-//  Created by Artem on 23.05.20.
-//  Copyright © 2020 Artem. All rights reserved.
+//  Created by Artem Evdokimov on 23.05.20.
+//  Copyright © 2020 Artem Evdokimov. All rights reserved.
 //
 
 import Foundation
