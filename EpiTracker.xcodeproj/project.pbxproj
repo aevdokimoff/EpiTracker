@@ -14,7 +14,7 @@
 		AC0284662477408500450499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0284642477408500450499 /* Main.storyboard */; };
 		AC0284682477408600450499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0284672477408600450499 /* Assets.xcassets */; };
 		AC02846B2477408600450499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0284692477408600450499 /* LaunchScreen.storyboard */; };
-		AC028480247746C300450499 /* quake.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC02847F247746C300450499 /* quake.plist */; };
+		AC028480247746C300450499 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC02847F247746C300450499 /* data.plist */; };
 		AC15B7CA2479ED1D00CC21AE /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC15B7C92479ED1C00CC21AE /* CommonExtensions.swift */; };
 		AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4809342479CFCD00211B75 /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +30,7 @@
 		AC0284672477408600450499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC02846A2477408600450499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC02846C2477408600450499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC02847F247746C300450499 /* quake.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quake.plist; sourceTree = "<group>"; };
+		AC02847F247746C300450499 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		AC15B7C92479ED1C00CC21AE /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		AC4809342479CFCD00211B75 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		FC9B939EB1DE57A9E4BA15D7 /* Pods-EpiTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpiTracker.release.xcconfig"; path = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				AC0284642477408500450499 /* Main.storyboard */,
 				AC0284672477408600450499 /* Assets.xcassets */,
 				AC0284692477408600450499 /* LaunchScreen.storyboard */,
-				AC02847F247746C300450499 /* quake.plist */,
+				AC02847F247746C300450499 /* data.plist */,
 				AC02846C2477408600450499 /* Info.plist */,
 			);
 			path = EpiTracker;
@@ -160,7 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC028480247746C300450499 /* quake.plist in Resources */,
+				AC028480247746C300450499 /* data.plist in Resources */,
 				AC02846B2477408600450499 /* LaunchScreen.storyboard in Resources */,
 				AC0284682477408600450499 /* Assets.xcassets in Resources */,
 				AC0284662477408500450499 /* Main.storyboard in Resources */,

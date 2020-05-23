@@ -225,7 +225,19 @@
                     <view key="view" contentMode="scaleToFill" id="nmo-j3-STW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-EK-Uil">
+                                <rect key="frame" x="156.5" y="437.5" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Id4-EK-Uil" firstAttribute="centerX" secondItem="nmo-j3-STW" secondAttribute="centerX" id="QWb-Rk-DRf"/>
+                            <constraint firstItem="Id4-EK-Uil" firstAttribute="centerY" secondItem="nmo-j3-STW" secondAttribute="centerY" id="prh-wr-sLb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C5O-lm-aGN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="chart.pie.fill" catalog="system" id="THw-vO-lcq"/>

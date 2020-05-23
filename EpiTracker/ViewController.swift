@@ -113,13 +113,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.mapView.isZoomEnabled = true
         self.mapView.isScrollEnabled = true
         
-        let dataFile = Bundle.main.path(forResource: "quake", ofType: "plist")!
-        let quakeData = NSArray(contentsOfFile: dataFile) as! [Dictionary<String, Any>]
+        let dataFile = Bundle.main.path(forResource: "data", ofType: "plist")!
+        let caseeData = NSArray(contentsOfFile: dataFile) as! [Dictionary<String, Any>]
         
-        for quake in quakeData {
-            let latitude: CLLocationDegrees = quake[kLatitude] as! CLLocationDegrees
-            let longtitude: CLLocationDegrees = quake[kLongitude] as! CLLocationDegrees
-            let magnitude = Double("\(quake[kMagnitude]!)")
+        for casee in caseeData {
+            let latitude: CLLocationDegrees = casee[kLatitude] as! CLLocationDegrees
+            let longtitude: CLLocationDegrees = casee[kLongitude] as! CLLocationDegrees
+            let magnitude = Double("\(casee[kMagnitude]!)")
             let location = CLLocation(latitude: latitude, longitude: longtitude)
             self.localtions.add(location)
             self.weights.add(Int(magnitude! * 10))
