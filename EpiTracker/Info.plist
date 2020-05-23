@@ -62,7 +62,7 @@
 	</array>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>This application requires location services to work</string>
-    <key>NSLocationAlwaysUsageDescription</key>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>This application requires location services to work</string>
 </dict>
 </plist>

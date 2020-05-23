@@ -17,6 +17,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var selectDiseaseTextField: UITextField!
     @IBOutlet weak var selectPeriodTextField: UITextField!
     @IBOutlet weak var selectVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var selectVisualEffectViewEnclosureView: UIView!
     
     let kLatitude = "latitude"
     let kLongitude = "longitude"
@@ -36,13 +37,29 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        setupTextFieldAndPickerViews()
-        setupNotifications()
-        setupMap()
+        self.setupKeyboard()
+        self.setupTextFieldAndPickerViews()
+        self.setupNotifications()
+        self.setupMap()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupViews()
+    }
+    
+    func setupViews() {
+        self.selectVisualEffectView.layer.cornerRadius = 10.0
+        self.selectVisualEffectView.layer.masksToBounds = true
+        self.selectVisualEffectViewEnclosureView.addShadow(offset: CGSize.zero, color: UIColor.black, radius: 8.0, opacity: 0.15)
+    }
+    
+    func setupKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
     }
     
     func setupTextFieldAndPickerViews() {
-        
         // TextFields
         self.selectPeriodTextField.inputView = self.selectPeriodPickerView
         self.selectPeriodTextField.inputAccessoryView = self.selectPeriodPickerView.toolbar
@@ -136,6 +153,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
 }
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -199,5 +220,20 @@ extension ViewController: ToolbarPickerViewDelegate {
 extension CLLocation {
     func fetchCityAndCountry(completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first?.locality, $0?.first?.country, $1) }
+    }
+}
+
+extension UIView {
+
+    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
+        layer.masksToBounds = false
+        layer.shadowOffset = offset
+        layer.shadowColor = color.cgColor
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+
+        let backgroundCGColor = backgroundColor?.cgColor
+        backgroundColor = nil
+        layer.backgroundColor =  backgroundCGColor
     }
 }
