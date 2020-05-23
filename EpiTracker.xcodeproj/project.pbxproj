@@ -15,6 +15,7 @@
 		AC0284682477408600450499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0284672477408600450499 /* Assets.xcassets */; };
 		AC02846B2477408600450499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0284692477408600450499 /* LaunchScreen.storyboard */; };
 		AC028480247746C300450499 /* quake.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC02847F247746C300450499 /* quake.plist */; };
+		AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4809342479CFCD00211B75 /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AC02846A2477408600450499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC02846C2477408600450499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC02847F247746C300450499 /* quake.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quake.plist; sourceTree = "<group>"; };
+		AC4809342479CFCD00211B75 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		FC9B939EB1DE57A9E4BA15D7 /* Pods-EpiTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpiTracker.release.xcconfig"; path = "Target Support Files/Pods-EpiTracker/Pods-EpiTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				AC02845E2477408500450499 /* AppDelegate.swift */,
 				AC0284602477408500450499 /* SceneDelegate.swift */,
 				AC0284622477408500450499 /* ViewController.swift */,
+				AC4809342479CFCD00211B75 /* CustomPicker.swift */,
 				AC0284642477408500450499 /* Main.storyboard */,
 				AC0284672477408600450499 /* Assets.xcassets */,
 				AC0284692477408600450499 /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 			files = (
 				AC0284632477408500450499 /* ViewController.swift in Sources */,
 				AC02845F2477408500450499 /* AppDelegate.swift in Sources */,
+				AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */,
 				AC0284612477408500450499 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

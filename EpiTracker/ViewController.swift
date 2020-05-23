@@ -10,8 +10,13 @@ import UIKit
 import MapKit
 import LFHeatMap
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var selectCityTextField: UITextField!
+    @IBOutlet weak var selectDiseaseTextField: UITextField!
+    @IBOutlet weak var selectPeriodTextField: UITextField!
+    @IBOutlet weak var selectVisualEffectView: UIVisualEffectView!
     
     let kLatitude = "latitude"
     let kLongitude = "longitude"
@@ -20,10 +25,64 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let localtions = NSMutableArray()
     var imageView = UIImageView()
     let weights = NSMutableArray()
+    let locationManager = CLLocationManager()
+    
+    fileprivate let selectPeriodPickerView = ToolbarPickerView()
+    fileprivate let selectDiseasePickerView = ToolbarPickerView()
+    fileprivate let diseasesList = ["Corona", "Grippe"]
+    fileprivate let periodsList = ["1-3 days", "4-7 days", "7-14 days", "More than 14 days"]
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        setupTextFieldAndPickerViews()
+        setupNotifications()
+        setupMap()
+    }
+    
+    func setupTextFieldAndPickerViews() {
+        
+        // TextFields
+        self.selectPeriodTextField.inputView = self.selectPeriodPickerView
+        self.selectPeriodTextField.inputAccessoryView = self.selectPeriodPickerView.toolbar
+        self.selectDiseaseTextField.inputView = self.selectDiseasePickerView
+        self.selectDiseaseTextField.inputAccessoryView = self.selectDiseasePickerView.toolbar
+
+        // PickerViews
+        self.selectPeriodPickerView.dataSource = self
+        self.selectPeriodPickerView.delegate = self
+        self.selectPeriodPickerView.toolbarDelegate = self
+        self.selectDiseasePickerView.dataSource = self
+        self.selectDiseasePickerView.delegate = self
+        self.selectDiseasePickerView.toolbarDelegate = self
+        
+        self.selectDiseasePickerView.reloadAllComponents()
+        self.selectDiseasePickerView.tag = 1
+        self.selectPeriodPickerView.reloadAllComponents()
+        self.selectPeriodPickerView.tag = 2
+    }
+    
+    func setupNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func setupMap() {
+        self.locationManager.requestAlwaysAuthorization()
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.startUpdatingLocation()
+        }
+        
         self.mapView.delegate = self
+        self.mapView.mapType = .standard
+        self.mapView.isZoomEnabled = true
+        self.mapView.isScrollEnabled = true
         
         let dataFile = Bundle.main.path(forResource: "quake", ofType: "plist")!
         let quakeData = NSArray(contentsOfFile: dataFile) as! [Dictionary<String, Any>]
@@ -43,10 +102,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         self.imageView = UIImageView(frame: mapView.frame)
         self.imageView.contentMode = .center
-        self.view.addSubview(self.imageView)
+        self.view.insertSubview(self.imageView, at: 1)
         let heatMap = LFHeatMap.heatMap(for: self.mapView, boost: 0.5, locations: self.localtions as? [Any], weights: self.weights as? [Any])
         self.imageView.image = heatMap
-        
     }
     
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
@@ -54,5 +112,92 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.imageView.image = heatMap
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            location.fetchCityAndCountry { city, country, error in
+                guard let city = city, let country = country, error == nil else { return }
+                print(city + ", " + country)
+                self.selectCityTextField.text = city
+            }
+        }
+    }
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+}
+
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 {
+            return self.diseasesList.count
+        } else {
+            return self.periodsList.count
+        }
+        
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 {
+            return self.diseasesList[row]
+        } else {
+            return self.periodsList[row]
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 1 {
+            self.selectDiseaseTextField.text = self.diseasesList[row]
+        } else {
+            self.selectPeriodTextField.text = self.periodsList[row]
+        }
+    }
+}
+
+extension ViewController: ToolbarPickerViewDelegate {
+    func didTapDone(tag: Int) {
+        if tag == 1 {
+            let row = self.selectDiseasePickerView.selectedRow(inComponent: 0)
+            self.selectDiseasePickerView.selectRow(row, inComponent: 0, animated: false)
+            self.selectDiseaseTextField.text = self.diseasesList[row]
+            self.selectDiseaseTextField.resignFirstResponder()
+        } else {
+            let row = self.selectPeriodPickerView.selectedRow(inComponent: 0)
+            self.selectPeriodPickerView.selectRow(row, inComponent: 0, animated: false)
+            self.selectPeriodTextField.text = self.periodsList[row]
+            self.selectPeriodTextField.resignFirstResponder()
+        }
+        
+    }
+
+    func didTapCancel(tag: Int) {
+        if tag == 1 {
+            self.selectDiseaseTextField.text = nil
+            self.selectDiseaseTextField.resignFirstResponder()
+        } else {
+            self.selectPeriodTextField.text = nil
+            self.selectPeriodTextField.resignFirstResponder()
+        }
+    }
+}
+
+extension CLLocation {
+    func fetchCityAndCountry(completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first?.locality, $0?.first?.country, $1) }
+    }
 }
