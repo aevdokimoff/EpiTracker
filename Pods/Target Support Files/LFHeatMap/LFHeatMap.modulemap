@@ -1,6 +1,0 @@
-framework module LFHeatMap {
-  umbrella header "LFHeatMap-umbrella.h"
-
-  export *
-  module * { export * }
-}
