@@ -7,5 +7,6 @@ target 'EpiTracker' do
 
   # Pods for EpiTracker
   pod "LFHeatMap"
+  pod 'SPAlert'
 
 end

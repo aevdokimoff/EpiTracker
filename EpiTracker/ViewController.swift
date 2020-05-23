@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import LFHeatMap
+import SPAlert
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var selectPeriodTextField: UITextField!
     @IBOutlet weak var selectVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var selectVisualEffectViewEnclosureView: UIView!
+    @IBOutlet weak var addNewCaseButton: UIButton!
     
     let kLatitude = "latitude"
     let kLongitude = "longitude"
@@ -37,6 +39,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.setupButtons()
         self.setupKeyboard()
         self.setupTextFieldAndPickerViews()
         self.setupNotifications()
@@ -45,7 +48,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setupViews()
+        self.setupViews()
+    }
+    
+    func setupButtons() {
+        self.addNewCaseButton.layer.cornerRadius = 4
     }
     
     func setupViews() {
@@ -155,6 +162,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    @IBAction func addNewCaseButtonDidTouch(_ sender: Any) {
+        let alertView = SPAlertView(title: "Case added", message: nil, preset: SPAlertPreset.done)
+        alertView.duration = 1.0
+        alertView.present()
     }
     
 }

@@ -52,6 +52,9 @@
                                                     <state key="normal" title="Add new case">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addNewCaseButtonDidTouch:" destination="Hgx-wS-ceq" eventType="touchUpInside" id="Ap3-5n-Nu9"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-kB-I2W">
                                                     <rect key="frame" x="24" y="198" width="366" height="34"/>
@@ -166,6 +169,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="WPE-S5-Wzh"/>
                     <connections>
+                        <outlet property="addNewCaseButton" destination="F6e-Rg-jRb" id="t71-zq-nJI"/>
                         <outlet property="mapView" destination="avM-AD-57R" id="hLh-mH-FGD"/>
                         <outlet property="selectCityTextField" destination="qVf-T4-QCb" id="dhZ-Lb-QAl"/>
                         <outlet property="selectDiseaseTextField" destination="HTn-fo-1nd" id="gay-nI-nWO"/>

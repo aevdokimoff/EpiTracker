@@ -1,16 +1,20 @@
 PODS:
   - LFHeatMap (1.0.2)
+  - SPAlert (2.1.4)
 
 DEPENDENCIES:
   - LFHeatMap
+  - SPAlert
 
 SPEC REPOS:
   trunk:
     - LFHeatMap
+    - SPAlert
 
 SPEC CHECKSUMS:
   LFHeatMap: 433197b20e4d57a9502bc2a2a21300fa851ff3c6
+  SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
 
-PODFILE CHECKSUM: f114c64152cc005aa261335b144adf67bfc0bcb0
+PODFILE CHECKSUM: 8673d974e45f4acf125096d39dcfebf9b45834e7
 
 COCOAPODS: 1.9.1
