@@ -14,13 +14,14 @@ import SPAlert
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // MARK: - Outlets
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var selectCityTextField: UITextField!
-    @IBOutlet weak var selectDiseaseTextField: UITextField!
-    @IBOutlet weak var selectPeriodTextField: UITextField!
-    @IBOutlet weak var selectVisualEffectView: UIVisualEffectView!
-    @IBOutlet weak var selectVisualEffectViewEnclosureView: UIView!
-    @IBOutlet weak var addNewCaseButton: UIButton!
+    @IBOutlet var mapView: MKMapView!
+    @IBOutlet var selectMapDiseaseType: UITextField!
+    @IBOutlet var selectCityTextField: UITextField!
+    @IBOutlet var selectDiseaseTextField: UITextField!
+    @IBOutlet var selectPeriodTextField: UITextField!
+    @IBOutlet var selectVisualEffectView: UIVisualEffectView!
+    @IBOutlet var selectVisualEffectViewEnclosureView: UIView!
+    @IBOutlet var addNewCaseButton: UIButton!
     
     // MARK: - Globals
     let kLatitude = "latitude"
@@ -32,9 +33,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     let weights = NSMutableArray()
     let locationManager = CLLocationManager()
     
+    fileprivate let selectMapDiseasePickerView = ToolbarPickerView()
     fileprivate let selectPeriodPickerView = ToolbarPickerView()
     fileprivate let selectDiseasePickerView = ToolbarPickerView()
-    fileprivate let diseasesList = ["Corona", "Grippe"]
+    fileprivate let diseasesList = ["COVID-19", "Flu", "Flu"]
     fileprivate let periodsList = ["1-3 days", "4-7 days", "7-14 days", "More than 14 days"]
 
     // MARK: - View Life Cycle
@@ -71,12 +73,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func setupTextFieldAndPickerViews() {
         // TextFields
+        self.selectMapDiseaseType.text = self.diseasesList[0]
+        self.selectMapDiseaseType.inputView = self.selectMapDiseasePickerView
+        self.selectMapDiseaseType.inputAccessoryView = self.selectMapDiseasePickerView.toolbar
         self.selectPeriodTextField.inputView = self.selectPeriodPickerView
         self.selectPeriodTextField.inputAccessoryView = self.selectPeriodPickerView.toolbar
         self.selectDiseaseTextField.inputView = self.selectDiseasePickerView
         self.selectDiseaseTextField.inputAccessoryView = self.selectDiseasePickerView.toolbar
 
         // PickerViews
+        self.selectMapDiseasePickerView.dataSource = self
+        self.selectMapDiseasePickerView.delegate = self
+        self.selectMapDiseasePickerView.toolbarDelegate = self
         self.selectPeriodPickerView.dataSource = self
         self.selectPeriodPickerView.delegate = self
         self.selectPeriodPickerView.toolbarDelegate = self
@@ -84,6 +92,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.selectDiseasePickerView.delegate = self
         self.selectDiseasePickerView.toolbarDelegate = self
         
+        self.selectMapDiseasePickerView.reloadAllComponents()
+        self.selectMapDiseasePickerView.tag = 0
         self.selectDiseasePickerView.reloadAllComponents()
         self.selectDiseasePickerView.tag = 1
         self.selectPeriodPickerView.reloadAllComponents()
@@ -181,12 +191,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
+        if pickerView.tag == 0 {
+            return self.diseasesList.count
+        } else if pickerView.tag == 1 {
             return self.diseasesList.count
         } else {
             return self.periodsList.count
         }
-        
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -194,7 +205,9 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
+        if pickerView.tag == 0 {
+            return self.diseasesList[row]
+        } else if pickerView.tag == 1 {
             return self.diseasesList[row]
         } else {
             return self.periodsList[row]
@@ -202,7 +215,9 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
+        if pickerView.tag == 0 {
+            self.selectDiseaseTextField.text = self.diseasesList[row]
+        } else if pickerView.tag == 1 {
             self.selectDiseaseTextField.text = self.diseasesList[row]
         } else {
             self.selectPeriodTextField.text = self.periodsList[row]
@@ -212,7 +227,12 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension ViewController: ToolbarPickerViewDelegate {
     func didTapDone(tag: Int) {
-        if tag == 1 {
+        if tag == 0 {
+            let row = self.selectMapDiseasePickerView.selectedRow(inComponent: 0)
+            self.selectMapDiseasePickerView.selectRow(row, inComponent: 0, animated: false)
+            self.selectMapDiseaseType.text = self.diseasesList[row]
+            self.selectMapDiseaseType.resignFirstResponder()
+        } else if tag == 1 {
             let row = self.selectDiseasePickerView.selectedRow(inComponent: 0)
             self.selectDiseasePickerView.selectRow(row, inComponent: 0, animated: false)
             self.selectDiseaseTextField.text = self.diseasesList[row]
@@ -227,7 +247,10 @@ extension ViewController: ToolbarPickerViewDelegate {
     }
 
     func didTapCancel(tag: Int) {
-        if tag == 1 {
+        if tag == 0 {
+            self.selectMapDiseaseType.text = nil
+            self.selectMapDiseaseType.resignFirstResponder()
+        } else if tag == 1 {
             self.selectDiseaseTextField.text = nil
             self.selectDiseaseTextField.resignFirstResponder()
         } else {

@@ -15,7 +15,6 @@
 		AC0284682477408600450499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0284672477408600450499 /* Assets.xcassets */; };
 		AC02846B2477408600450499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0284692477408600450499 /* LaunchScreen.storyboard */; };
 		AC028480247746C300450499 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC02847F247746C300450499 /* data.plist */; };
-		AC15B7CA2479ED1D00CC21AE /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC15B7C92479ED1C00CC21AE /* CommonExtensions.swift */; };
 		AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4809342479CFCD00211B75 /* CustomPicker.swift */; };
 		ACD91F4E247B4D9200C15A26 /* Covid19VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F4D247B4D9200C15A26 /* Covid19VC.swift */; };
 		ACD91F53247B4F4100C15A26 /* Covid19DetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F52247B4F4100C15A26 /* Covid19DetectionVC.swift */; };
@@ -54,7 +53,6 @@
 		AC02846A2477408600450499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC02846C2477408600450499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC02847F247746C300450499 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		AC15B7C92479ED1C00CC21AE /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		AC4809342479CFCD00211B75 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		ACD91F4D247B4D9200C15A26 /* Covid19VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19VC.swift; sourceTree = "<group>"; };
 		ACD91F52247B4F4100C15A26 /* Covid19DetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19DetectionVC.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				AC0284602477408500450499 /* SceneDelegate.swift */,
 				AC0284622477408500450499 /* ViewController.swift */,
 				AC4809342479CFCD00211B75 /* CustomPicker.swift */,
-				AC15B7C92479ED1C00CC21AE /* CommonExtensions.swift */,
 				ACD91F4F247B4F1800C15A26 /* COVID-19 */,
 				ACD91F86247B56EF00C15A26 /* Extensions.swift */,
 				AC0284642477408500450499 /* Main.storyboard */,
@@ -341,7 +338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC15B7CA2479ED1D00CC21AE /* CommonExtensions.swift in Sources */,
 				ACD91F73247B537300C15A26 /* CountryListInteractor.swift in Sources */,
 				ACD91F57247B4FA600C15A26 /* DeepBrain.mlmodel in Sources */,
 				ACD91F83247B566100C15A26 /* NewsModel.swift in Sources */,

@@ -141,13 +141,28 @@
                                 </constraints>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-1z-oyu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UWm-da-g8F">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQc-Q7-4Fz">
+                                            <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="gKi-yr-FJG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="TQc-Q7-4Fz" secondAttribute="trailing" constant="20" id="u2j-tw-zxs"/>
+                                        <constraint firstItem="TQc-Q7-4Fz" firstAttribute="top" secondItem="UWm-da-g8F" secondAttribute="top" constant="44" id="uyA-y4-9wZ"/>
+                                        <constraint firstItem="TQc-Q7-4Fz" firstAttribute="leading" secondItem="UWm-da-g8F" secondAttribute="leading" constant="20" id="xEx-ya-d4T"/>
+                                    </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="CpK-Nf-aNF"/>
+                                    <constraint firstAttribute="height" constant="86" id="CpK-Nf-aNF"/>
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
@@ -173,6 +188,7 @@
                         <outlet property="mapView" destination="avM-AD-57R" id="hLh-mH-FGD"/>
                         <outlet property="selectCityTextField" destination="qVf-T4-QCb" id="dhZ-Lb-QAl"/>
                         <outlet property="selectDiseaseTextField" destination="HTn-fo-1nd" id="gay-nI-nWO"/>
+                        <outlet property="selectMapDiseaseType" destination="TQc-Q7-4Fz" id="MsP-O1-hJK"/>
                         <outlet property="selectPeriodTextField" destination="5fg-kB-I2W" id="kgV-Jc-yLp"/>
                         <outlet property="selectVisualEffectView" destination="FN9-L2-zIH" id="Qsx-m7-IIF"/>
                         <outlet property="selectVisualEffectViewEnclosureView" destination="GDE-er-sOG" id="j0M-Jy-jlS"/>
@@ -180,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSd-eN-TCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-808"/>
+            <point key="canvasLocation" x="2298.5507246376815" y="-808.25892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0jv-VM-SWJ">
@@ -331,7 +347,7 @@
         <scene sceneID="kWa-MJ-R6a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kgg-XB-AUZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="COVID-19" image="exclamationmark.circle.fill" catalog="system" id="pWn-Gp-h5H"/>
+                    <tabBarItem key="tabBarItem" title="COVID-19" image="exclamationmark.circle.fill" catalog="system" badgeValue="!" id="pWn-Gp-h5H"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ArF-5f-qWU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
