@@ -26,5 +26,16 @@ The purpose of this POC application is to create an interactive heat map with th
 * SPAlert
 * PKHUD
 
+## Model
+The [DeepBrain](https://github.com/skytells-research/Covid19-AI-Detection) model was trained with more than 16,000 images in high resolution
+
+#### PRECISION RECALL
+| Class   |      Precision(%)      |  Recall(%) |
+|----------|:-------------:|------:|
+| BacterialPneumonia |  94.74 | 85.71 |
+| ViralPneumonia |    92.31   |   97.30 |
+| Covid19 | 98.57 |    100.00 |
+| Normal | 100.00 |    97.22 |
+
 ## License
 This project is available under the MIT license.
