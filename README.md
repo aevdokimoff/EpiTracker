@@ -15,3 +15,6 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 ## How technology can help?
 
 The purpose of this POC application is to create an interactive heat map with the areas of most active infection. All the user needs to do is select her/his disease type and tap the "add" button. The data will be anonymously saved in the database and will be available to everyone. Thus, states, healthcare and other institutions would have the opportunity to prevent a possible pandemic in time by taking appropriate measures. This approach may help save hundreds of thousands of lives.
+
+## License
+This project is available under the MIT license.
