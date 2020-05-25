@@ -1,4 +1,4 @@
-# EpiTracker
+# EpiTracker – Prevent pandemics in time 
 
 ![Screenshot](screen.png?raw=true "Title")
 
