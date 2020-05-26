@@ -188,7 +188,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             alertView.present()
             UserDefaults.standard.set(true, forKey: "isDiseaseAddedOnce")
         } else {
-            let alertView = SPAlertView(title: "Case already added", message: nil, preset: SPAlertPreset.error)
+            let alertView = SPAlertView(title: "You have already added a case", message: nil, preset: SPAlertPreset.error)
             alertView.duration = 2.0
             alertView.present()
         }

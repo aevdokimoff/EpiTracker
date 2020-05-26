@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Covid19VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StatisticsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
     
-    var menus = ["Detect COVID-19", "News", "Cases"]
+    var menus = ["COVID-19"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,6 @@ class Covid19VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "goToCovid19Detection", sender: nil)
-        case 1:
-            performSegue(withIdentifier: "goToCovid19News", sender: nil)
-        case 2:
             performSegue(withIdentifier: "goToCovid19Cases", sender: nil)
         default:
             break

@@ -17,9 +17,9 @@
 		AC028480247746C300450499 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC02847F247746C300450499 /* data.plist */; };
 		AC1A17B8247D7BF2005B59EA /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A17B7247D7BF2005B59EA /* Commons.swift */; };
 		AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4809342479CFCD00211B75 /* CustomPicker.swift */; };
-		ACD91F4E247B4D9200C15A26 /* Covid19VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F4D247B4D9200C15A26 /* Covid19VC.swift */; };
+		ACD91F4E247B4D9200C15A26 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F4D247B4D9200C15A26 /* StatisticsVC.swift */; };
 		ACD91F53247B4F4100C15A26 /* Covid19DetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F52247B4F4100C15A26 /* Covid19DetectionVC.swift */; };
-		ACD91F55247B4F4E00C15A26 /* Covid19NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F54247B4F4E00C15A26 /* Covid19NewsVC.swift */; };
+		ACD91F55247B4F4E00C15A26 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F54247B4F4E00C15A26 /* NewsVC.swift */; };
 		ACD91F57247B4FA600C15A26 /* DeepBrain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F56247B4FA600C15A26 /* DeepBrain.mlmodel */; };
 		ACD91F5E247B536800C15A26 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F5A247B536800C15A26 /* Endpoints.swift */; };
 		ACD91F5F247B536800C15A26 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD91F5B247B536800C15A26 /* RemoteDataManager.swift */; };
@@ -56,9 +56,9 @@
 		AC02847F247746C300450499 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		AC1A17B7247D7BF2005B59EA /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		AC4809342479CFCD00211B75 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
-		ACD91F4D247B4D9200C15A26 /* Covid19VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19VC.swift; sourceTree = "<group>"; };
+		ACD91F4D247B4D9200C15A26 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		ACD91F52247B4F4100C15A26 /* Covid19DetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19DetectionVC.swift; sourceTree = "<group>"; };
-		ACD91F54247B4F4E00C15A26 /* Covid19NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19NewsVC.swift; sourceTree = "<group>"; };
+		ACD91F54247B4F4E00C15A26 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		ACD91F56247B4FA600C15A26 /* DeepBrain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepBrain.mlmodel; sourceTree = "<group>"; };
 		ACD91F5A247B536800C15A26 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		ACD91F5B247B536800C15A26 /* RemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
@@ -130,6 +130,8 @@
 				AC0284622477408500450499 /* ViewController.swift */,
 				AC4809342479CFCD00211B75 /* CustomPicker.swift */,
 				ACD91F4F247B4F1800C15A26 /* COVID-19 */,
+				ACD91F78247B55A300C15A26 /* News */,
+				ACD91F79247B55A900C15A26 /* Detection */,
 				ACD91F86247B56EF00C15A26 /* Extensions.swift */,
 				AC0284642477408500450499 /* Main.storyboard */,
 				AC0284672477408600450499 /* Assets.xcassets */,
@@ -143,9 +145,7 @@
 		ACD91F4F247B4F1800C15A26 /* COVID-19 */ = {
 			isa = PBXGroup;
 			children = (
-				ACD91F4D247B4D9200C15A26 /* Covid19VC.swift */,
-				ACD91F79247B55A900C15A26 /* Detection */,
-				ACD91F78247B55A300C15A26 /* News */,
+				ACD91F4D247B4D9200C15A26 /* StatisticsVC.swift */,
 				ACD91F58247B534400C15A26 /* Cases */,
 			);
 			path = "COVID-19";
@@ -198,7 +198,7 @@
 		ACD91F78247B55A300C15A26 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				ACD91F54247B4F4E00C15A26 /* Covid19NewsVC.swift */,
+				ACD91F54247B4F4E00C15A26 /* NewsVC.swift */,
 				ACD91F7A247B565200C15A26 /* ImageDownloader.swift */,
 				ACD91F7D247B566000C15A26 /* FlipboardCell.swift */,
 				ACD91F7C247B566000C15A26 /* NewsCell.swift */,
@@ -354,11 +354,11 @@
 				AC02845F2477408500450499 /* AppDelegate.swift in Sources */,
 				ACD91F82247B566100C15A26 /* NewsProfileCell.swift in Sources */,
 				ACD91F5E247B536800C15A26 /* Endpoints.swift in Sources */,
-				ACD91F55247B4F4E00C15A26 /* Covid19NewsVC.swift in Sources */,
+				ACD91F55247B4F4E00C15A26 /* NewsVC.swift in Sources */,
 				ACD91F5F247B536800C15A26 /* RemoteDataManager.swift in Sources */,
 				ACD91F81247B566100C15A26 /* FlipboardCell.swift in Sources */,
 				AC4809352479CFCD00211B75 /* CustomPicker.swift in Sources */,
-				ACD91F4E247B4D9200C15A26 /* Covid19VC.swift in Sources */,
+				ACD91F4E247B4D9200C15A26 /* StatisticsVC.swift in Sources */,
 				ACD91F74247B537300C15A26 /* CountryDetailPresenter.swift in Sources */,
 				ACD91F77247B537300C15A26 /* CountryDetailProtocol.swift in Sources */,
 				ACD91F70247B537300C15A26 /* CountryListCell.swift in Sources */,

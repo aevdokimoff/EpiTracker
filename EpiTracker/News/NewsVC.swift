@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class Covid19NewsVC: UIViewController {
+class NewsVC: UIViewController {
     // UI
     private var collectionView: UICollectionView?
     private let refreshControl = UIRefreshControl()
@@ -29,7 +29,7 @@ class Covid19NewsVC: UIViewController {
     }
 }
 
-private extension Covid19NewsVC {
+private extension NewsVC {
     func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: genericLayout())
@@ -94,7 +94,7 @@ private extension Covid19NewsVC {
     }
 }
 
-extension Covid19NewsVC: UICollectionViewDataSource {
+extension NewsVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles.count
     }
@@ -117,7 +117,7 @@ extension Covid19NewsVC: UICollectionViewDataSource {
     }
 }
 
-extension Covid19NewsVC: UICollectionViewDelegate {
+extension NewsVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
