@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slp-fk-7nM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slp-fk-7nM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,7 +210,7 @@
                     <connections>
                         <segue destination="Jh3-Hh-yX9" kind="relationship" relationship="viewControllers" id="hGl-3i-Hll"/>
                         <segue destination="kgg-XB-AUZ" kind="relationship" relationship="viewControllers" id="gRF-Bn-0zT"/>
-                        <segue destination="JS8-we-1M8" kind="relationship" relationship="viewControllers" id="wp7-9Z-1YJ"/>
+                        <segue destination="GxG-ft-CER" kind="relationship" relationship="viewControllers" id="wp7-9Z-1YJ"/>
                         <segue destination="8oz-TY-jyI" kind="relationship" relationship="viewControllers" id="aLF-vT-0yi"/>
                     </connections>
                 </tabBarController>
@@ -218,7 +218,7 @@
             </objects>
             <point key="canvasLocation" x="86" y="-226"/>
         </scene>
-        <!--COVID-19-->
+        <!--Statistics-->
         <scene sceneID="k1U-W0-65C">
             <objects>
                 <viewController id="raI-Oq-ctF" customClass="StatisticsVC" customModule="EpiTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,7 +254,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H7B-K0-gAi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="COVID-19" id="ETS-Cf-NBz"/>
+                    <navigationItem key="navigationItem" title="Statistics" id="ETS-Cf-NBz"/>
                     <connections>
                         <outlet property="tableView" destination="SAI-5n-hS6" id="nhX-Pd-bsm"/>
                         <segue destination="B2N-QM-5jL" kind="show" identifier="goToCovid19Cases" id="ni6-0G-X7f"/>
@@ -263,22 +263,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uuk-zb-HEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2299" y="-92"/>
-        </scene>
-        <!--Detection-->
-        <scene sceneID="WKN-VC-nY3">
-            <objects>
-                <viewController id="5B6-Eh-eae" customClass="Covid19DetectionVC" customModule="EpiTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iXN-QQ-yxU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cPM-NQ-O0p"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Detection" id="Inq-dp-tav"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="shR-OH-gzN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2299" y="654"/>
         </scene>
         <!--News-->
         <scene sceneID="Dj2-ht-Bk0">
@@ -290,12 +274,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="DXh-jq-LhC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="square.grid.2x2.fill" catalog="system" id="eo6-07-dkc"/>
                     <navigationItem key="navigationItem" title="News" id="VFv-kg-Fz1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ws0-VK-03J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1420"/>
+            <point key="canvasLocation" x="2299" y="1420"/>
         </scene>
         <!--Cases-->
         <scene sceneID="S2r-oF-qPn">
@@ -838,23 +821,65 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5B6-Eh-eae" kind="relationship" relationship="rootViewController" id="y1Y-2M-Xbw"/>
+                        <segue destination="cMs-Dq-DuG" kind="relationship" relationship="rootViewController" id="6WM-V7-auC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bd-2c-DFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1328.985507246377" y="653.57142857142856"/>
         </scene>
+        <!--News-->
+        <scene sceneID="GeS-Mv-lOj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GxG-ft-CER" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="square.grid.2x2.fill" catalog="system" id="eo6-07-dkc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jch-9S-Khf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JS8-we-1M8" kind="relationship" relationship="rootViewController" id="9wy-DS-O9S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2RI-T8-uzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.985507246377" y="1419.6428571428571"/>
+        </scene>
+        <!--Covid19 DetectionVC-->
+        <scene sceneID="Euo-VJ-NHC">
+            <objects>
+                <viewController id="cMs-Dq-DuG" customClass="Covid19DetectionVC" customModule="EpiTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMw-8u-CE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="5IJ-vd-QQk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Opz-f3-yRH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="uTA-Bz-prw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1cV-D4-F3S"/>
+                    <connections>
+                        <outlet property="previewView" destination="Opz-f3-yRH" id="IJC-XM-POZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpu-4B-R6B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="654"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="asterisk.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="bell.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="chart.pie.fill" catalog="system" width="64" height="62"/>
+        <image name="asterisk.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="bell.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chart.pie.fill" catalog="system" width="128" height="124"/>
         <image name="flag_placeholder" width="499" height="333"/>
         <image name="sentiment_dissatisfied_24px" width="24" height="24"/>
         <image name="sentiment_neutral_24px" width="24" height="24"/>
         <image name="sentiment_satisfied_24px" width="24" height="24"/>
         <image name="sentiment_very_dissatisfied_24px" width="24" height="24"/>
-        <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>

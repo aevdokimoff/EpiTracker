@@ -137,7 +137,7 @@ class VisionObjectRecognitionViewController: Covid19DetectionVC {
         // Setup Vision parts
         
         
-        guard let modelURL = Bundle.main.url(forResource: "DeepBrain", withExtension: "mlmodelc") else {
+        guard let modelURL = Bundle.main.url(forResource: "DeepBrain", withExtension: "mlmodel") else {
            print("Model is missing")
            return
         }
