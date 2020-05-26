@@ -36,7 +36,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     fileprivate let selectMapDiseasePickerView = ToolbarPickerView()
     fileprivate let selectPeriodPickerView = ToolbarPickerView()
     fileprivate let selectDiseasePickerView = ToolbarPickerView()
-    fileprivate let diseasesList = ["COVID-19", "Flu", "Flu"]
+    fileprivate let diseasesList = ["COVID-19", "Flu"]
     fileprivate let periodsList = ["1-3 days", "4-7 days", "7-14 days", "More than 14 days"]
 
     // MARK: - View Life Cycle
@@ -182,9 +182,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     // MARK: - Actions
     @IBAction func addNewCaseButtonDidTouch(_ sender: Any) {
-        let alertView = SPAlertView(title: "Case added", message: nil, preset: SPAlertPreset.done)
-        alertView.duration = 1.0
-        alertView.present()
+        if !checkCaseAddedOnce() {
+            let alertView = SPAlertView(title: "Case added", message: nil, preset: SPAlertPreset.done)
+            alertView.duration = 1.0
+            alertView.present()
+            UserDefaults.standard.set(true, forKey: "isDiseaseAddedOnce")
+        } else {
+            let alertView = SPAlertView(title: "Case already added", message: nil, preset: SPAlertPreset.error)
+            alertView.duration = 2.0
+            alertView.present()
+        }
+        self.setupButtons()
     }
     
 }
