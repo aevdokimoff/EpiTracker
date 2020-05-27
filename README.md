@@ -24,7 +24,7 @@ The purpose of this PoC application is to create an interactive heat map with th
 
 ### In progress:
 * Back-End part 
-* World statistics on most popular diseases
+* Add other common diseases to statistics 
 
 ## Tech Specifications:
 * Programming language: Swift
