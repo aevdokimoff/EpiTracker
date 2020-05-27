@@ -10,7 +10,7 @@ Humanity is in crisis due to COVID-19 global outbreak which is already declared 
 * Delayed information retrieval due to manual processes
 * And many more
 
-But what if we had an alternative source of statistics – **not** only for corona virus – that could be compared with official statistics, so we would be able to update our prevoius conclusions? 
+But what if there would be an alternative source of statistics – **not** only for corona virus – that could be compared with official statistics, so it would be possible to make conclusions based on different statistics sources? 
 
 ## That is how we can do it
 The purpose of this PoC application is to create an interactive heat map with the areas of most active infection rate of common diseases. All the user needs to do is select her/his disease type and tap the "add" button, **it is only possible once**, so users would not be able to add multiple cases from one device to manipulate statistics. The data is then anonymously saved in the database and is available to everyone. Thus, states, healthcare and other institutions would have the opportunity to prevent a possible pandemic in time by taking appropriate measures. This approach may help save hundreds of thousands of lives.
