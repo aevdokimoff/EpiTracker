@@ -9,7 +9,11 @@
 import Foundation
 
 func checkCaseAddedOnce() -> Bool {
-    let key = "isDiseaseAddedOnce"
-    
+    let key = "isCaseAddedOnce"
+    return UserDefaults.standard.object(forKey: key) != nil && UserDefaults.standard.bool(forKey: key)
+}
+
+func checkIsInAddedCaseMode() -> Bool {
+    let key = "isInAddedCaseMode"
     return UserDefaults.standard.object(forKey: key) != nil && UserDefaults.standard.bool(forKey: key)
 }

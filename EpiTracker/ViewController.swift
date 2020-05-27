@@ -19,9 +19,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet var selectCityTextField: UITextField!
     @IBOutlet var selectDiseaseTextField: UITextField!
     @IBOutlet var selectPeriodTextField: UITextField!
-    @IBOutlet var selectVisualEffectView: UIVisualEffectView!
-    @IBOutlet var selectVisualEffectViewEnclosureView: UIView!
+    @IBOutlet var addNewCaseEnclosureVisualEffectView: UIVisualEffectView!
+    @IBOutlet var addRecoveryEnclosureVisualEffectView: UIVisualEffectView!
+    @IBOutlet var addNewCaseEnclosureView: UIView!
+    @IBOutlet var addRecoveryEnclosureView: UIView!
     @IBOutlet var addNewCaseButton: UIButton!
+    @IBOutlet var addNewRecoveryButton: UIButton!
     
     // MARK: - Globals
     let kLatitude = "latitude"
@@ -58,12 +61,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // MARK: - UI
     func setupButtons() {
         self.addNewCaseButton.layer.cornerRadius = 4
+        self.addNewRecoveryButton.layer.cornerRadius = 4
     }
     
     func setupViews() {
-        self.selectVisualEffectView.layer.cornerRadius = 10.0
-        self.selectVisualEffectView.layer.masksToBounds = true
-        self.selectVisualEffectViewEnclosureView.addShadow(offset: CGSize.zero, color: UIColor.black, radius: 8.0, opacity: 0.15)
+        if checkIsInAddedCaseMode() {
+            self.addNewCaseEnclosureView.isHidden = true
+            self.addRecoveryEnclosureView.isHidden = false
+        } else {
+            self.addNewCaseEnclosureView.isHidden = false
+            self.addRecoveryEnclosureView.isHidden = true
+        }
+        self.addNewCaseEnclosureVisualEffectView.layer.cornerRadius = 10.0
+        self.addNewCaseEnclosureVisualEffectView.layer.masksToBounds = true
+        self.addNewCaseEnclosureView.addShadow(offset: CGSize.zero, color: UIColor.black, radius: 8.0, opacity: 0.15)
+        self.addRecoveryEnclosureVisualEffectView.layer.cornerRadius = 10.0
+        self.addRecoveryEnclosureVisualEffectView.layer.masksToBounds = true
+        self.addRecoveryEnclosureView.addShadow(offset: CGSize.zero, color: UIColor.black, radius: 8.0, opacity: 0.15)
     }
     
     func setupKeyboard() {
@@ -182,16 +196,29 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     // MARK: - Actions
     @IBAction func addNewCaseButtonDidTouch(_ sender: Any) {
-        if !checkCaseAddedOnce() {
+        if !checkIsInAddedCaseMode() && !checkCaseAddedOnce() {
             let alertView = SPAlertView(title: "Case added", message: nil, preset: SPAlertPreset.done)
             alertView.duration = 1.0
             alertView.present()
-            UserDefaults.standard.set(true, forKey: "isDiseaseAddedOnce")
-        } else {
-            let alertView = SPAlertView(title: "You have already added a case", message: nil, preset: SPAlertPreset.error)
-            alertView.duration = 2.0
+            UserDefaults.standard.set(true, forKey: "isCaseAddedOnce")
+            UserDefaults.standard.set(true, forKey: "isInAddedCaseMode")
+        } else if !checkIsInAddedCaseMode() && checkCaseAddedOnce() {
+            let alertView = SPAlertView(title: "Case already added", message: nil, preset: SPAlertPreset.error)
+            alertView.duration = 2.5
             alertView.present()
         }
+        self.setupViews()
+        self.setupButtons()
+    }
+    
+    @IBAction func addNewRecoveryButtonDidTouch(_ sender: Any) {
+        if checkIsInAddedCaseMode() {
+            let alertView = SPAlertView(title: "Recovery added", message: nil, preset: SPAlertPreset.done)
+            alertView.duration = 1.0
+            alertView.present()
+            UserDefaults.standard.set(false, forKey: "isInAddedCaseMode")
+        }
+        self.setupViews()
         self.setupButtons()
     }
     
