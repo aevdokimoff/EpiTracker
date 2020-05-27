@@ -18,9 +18,8 @@ The purpose of this PoC application is to create an interactive heat map with th
 * Add new disease case
 * Add new recovery case
 * Show disease statistics 
-* Show world statistics on COVID-19
+* Show the latest news from the healthcare sector
 * COVID-19 detection by lung X-ray using machine learning 
-* Show the latest news on COVID-19 
 
 ### In progress:
 * Back-End part 
