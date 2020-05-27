@@ -13,7 +13,7 @@ Humanity is in crisis due to COVID-19 global outbreak which is already declared 
 But what if we had an alternative source of information, that could be compared with official statistics, so we would be able to update our prevoius conclusions?
 
 ## That is how we can do it
-The purpose of this PoC application is to create an interactive heat map with the areas of most active infection – not only COVID-19, but **also other common diseases**. All the user needs to do is select her/his disease type and tap the "add" button. The data will be anonymously saved in the database and will be available to everyone. Thus, states, healthcare and other institutions would have the opportunity to prevent a possible pandemic in time by taking appropriate measures. This approach may help save hundreds of thousands of lives.
+The purpose of this PoC application is to create an interactive heat map with the areas of most active infection rate of common diseases (not only COVID-19) and provide it as an alternative source of information. All the user needs to do is select her/his disease type and tap the "add" button. The data will be anonymously saved in the database and will be available to everyone. Thus, states, healthcare and other institutions would have the opportunity to prevent a possible pandemic in time by taking appropriate measures. This approach may help save hundreds of thousands of lives.
 
 ### Functionality:
 * Show disease spread using heat map
